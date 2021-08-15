@@ -1,0 +1,25 @@
+[2021-08-15 18:58:40:437][restartedMain] INFO c.e.spring.BasicWebAppApplication - Starting BasicWebAppApplication using Java 1.8.0_271 on insung.local with PID 47985 (/Users/kook/workspaces/javawork/server/BasicSpringboot/target/classes started by kook in /Users/kook/workspaces/javawork/server/BasicSpringboot)
+[2021-08-15 18:58:40:443][restartedMain] DEBUGc.e.spring.BasicWebAppApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+[2021-08-15 18:58:40:444][restartedMain] INFO c.e.spring.BasicWebAppApplication - No active profile set, falling back to default profiles: default
+[2021-08-15 18:58:41:1446][restartedMain] INFO c.e.spring.BasicWebAppApplication - Started BasicWebAppApplication in 1.32 seconds (JVM running for 1.8)
+[2021-08-15 19:05:28:506][restartedMain] INFO c.e.spring.BasicWebAppApplication - Starting BasicWebAppApplication using Java 1.8.0_271 on insung.local with PID 49330 (/Users/kook/workspaces/javawork/server/BasicSpringboot/target/classes started by kook in /Users/kook/workspaces/javawork/server/BasicSpringboot)
+[2021-08-15 19:05:28:507][restartedMain] DEBUGc.e.spring.BasicWebAppApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+[2021-08-15 19:05:28:508][restartedMain] INFO c.e.spring.BasicWebAppApplication - No active profile set, falling back to default profiles: default
+[2021-08-15 19:05:29:1405][restartedMain] INFO c.e.spring.BasicWebAppApplication - Started BasicWebAppApplication in 1.194 seconds (JVM running for 1.835)
+[2021-08-15 19:08:58:505][restartedMain] INFO c.e.spring.BasicWebAppApplication - Starting BasicWebAppApplication using Java 1.8.0_271 on insung.local with PID 49634 (/Users/kook/workspaces/javawork/server/BasicSpringboot/target/classes started by kook in /Users/kook/workspaces/javawork/server/BasicSpringboot)
+[2021-08-15 19:08:58:507][restartedMain] DEBUGc.e.spring.BasicWebAppApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+[2021-08-15 19:08:58:507][restartedMain] INFO c.e.spring.BasicWebAppApplication - No active profile set, falling back to default profiles: default
+[2021-08-15 19:08:58:1412][restartedMain] INFO c.e.spring.BasicWebAppApplication - Started BasicWebAppApplication in 1.187 seconds (JVM running for 1.793)
+[2021-08-15 19:14:45:493][restartedMain] INFO c.e.spring.BasicWebAppApplication - Starting BasicWebAppApplication using Java 1.8.0_271 on insung.local with PID 50170 (/Users/kook/workspaces/javawork/server/BasicSpringboot/target/classes started by kook in /Users/kook/workspaces/javawork/server/BasicSpringboot)
+[2021-08-15 19:14:45:495][restartedMain] DEBUGc.e.spring.BasicWebAppApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+[2021-08-15 19:14:45:495][restartedMain] INFO c.e.spring.BasicWebAppApplication - No active profile set, falling back to default profiles: default
+[2021-08-15 19:14:46:1470][restartedMain] INFO c.e.spring.BasicWebAppApplication - Started BasicWebAppApplication in 1.245 seconds (JVM running for 1.929)
+[2021-08-15 19:14:52:6983][http-nio-8081-exec-1] DEBUGc.e.s.j.c.JavaScriptController - in test02
+[2021-08-15 19:25:58:639][restartedMain] INFO c.e.spring.BasicWebAppApplication - Starting BasicWebAppApplication using Java 1.8.0_271 on insung.local with PID 51021 (/Users/kook/workspaces/javawork/server/BasicSpringboot/target/classes started by kook in /Users/kook/workspaces/javawork/server/BasicSpringboot)
+[2021-08-15 19:25:58:641][restartedMain] DEBUGc.e.spring.BasicWebAppApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+[2021-08-15 19:25:58:641][restartedMain] INFO c.e.spring.BasicWebAppApplication - No active profile set, falling back to default profiles: default
+[2021-08-15 19:26:29:432][restartedMain] INFO c.e.spring.BasicWebAppApplication - Starting BasicWebAppApplication using Java 1.8.0_271 on insung.local with PID 51077 (/Users/kook/workspaces/javawork/server/BasicSpringboot/target/classes started by kook in /Users/kook/workspaces/javawork/server/BasicSpringboot)
+[2021-08-15 19:26:29:434][restartedMain] DEBUGc.e.spring.BasicWebAppApplication - Running with Spring Boot v2.4.0, Spring v5.3.1
+[2021-08-15 19:26:29:434][restartedMain] INFO c.e.spring.BasicWebAppApplication - No active profile set, falling back to default profiles: default
+[2021-08-15 19:26:30:1378][restartedMain] INFO c.e.spring.BasicWebAppApplication - Started BasicWebAppApplication in 1.219 seconds (JVM running for 1.825)
+[2021-08-15 19:26:34:5945][http-nio-8081-exec-1] DEBUGc.e.s.j.c.JavaScriptController - in test02
