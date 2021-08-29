@@ -40,8 +40,7 @@ public class SqliteController {
 			outerMap.put("preparedStatement", resultByPreparedStatement);
 
 //			List<TestModel> resultList = sqliteService.getAll();
-//			outerMap.put("list", resultList);
-//			
+//			outerMap.put("list", resultList);	
 //			List<TestModel> resultList2 = sqliteService.getAllByMapperInterface();
 //			outerMap.put("list2", resultList2);
 			
