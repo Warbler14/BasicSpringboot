@@ -8,10 +8,6 @@ import com.lotus.jewel.data.sqlSession.SqlSessionAdaptor;
 import com.lotus.jewel.data.sqlSession.SqlSessionFactoryAdaptor;
 
 /*
- * 메이븐 공부
- * 라이브러리 생성
- * 라이브러리 내장 종속성 설정, 빌드
- * 실
  * 
  * */
 @Configuration
@@ -31,26 +27,7 @@ public class WebConfig implements WebMvcConfigurer {
 		
 		
 //		Resource path = new ClassPathResource("config/setting.yml");
-		 
-		SqlSessionAdaptor sqlSessionAdaptor = new SqlSessionFactoryAdaptor();
 		
 		
-//		 
-//		
-//		
-//		
-//		String dbFilePath = "./test.db";
-//		
-//		File file = new File(dbFilePath);
-//		if(file.exists()) {
-//			file.delete();
-//		}
-//		
-//		String url = JDBC.PREFIX + dbFilePath;
-//		
-//		
-//		
-//		SQLitePreparedStatementAdaptorTest.createTableTest(url);
-//		
 	}
 }
