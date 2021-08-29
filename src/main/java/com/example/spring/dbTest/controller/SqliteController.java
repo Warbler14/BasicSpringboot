@@ -38,7 +38,7 @@ public class SqliteController {
 		try {
 			String resultByPreparedStatement = sqliteService.getAllByPreparedStatement();
 			outerMap.put("preparedStatement", resultByPreparedStatement);
-//
+
 //			List<TestModel> resultList = sqliteService.getAll();
 //			outerMap.put("list", resultList);
 //			
