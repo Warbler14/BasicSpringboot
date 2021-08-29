@@ -1,16 +1,11 @@
 package com.example.spring.configurer;
 
-//import java.io.File;
-//import org.springframework.core.io.ClassPathResource;
-//import org.springframework.core.io.Resource;
-//import org.sqlite.JDBC;
-import com.mo.sqlSession.SqlSessionAdaptor;
-import com.mo.sqlSession.SqlSessionFactoryAdaptor;
-//import test.SQLitePreparedStatementAdaptorTest;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.lotus.jewel.data.sqlSession.SqlSessionAdaptor;
+import com.lotus.jewel.data.sqlSession.SqlSessionFactoryAdaptor;
 
 /*
  * 메이븐 공부
@@ -38,6 +33,8 @@ public class WebConfig implements WebMvcConfigurer {
 //		Resource path = new ClassPathResource("config/setting.yml");
 		 
 		SqlSessionAdaptor sqlSessionAdaptor = new SqlSessionFactoryAdaptor();
+		
+		
 //		 
 //		
 //		
