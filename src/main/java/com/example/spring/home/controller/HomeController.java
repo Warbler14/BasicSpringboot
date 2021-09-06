@@ -2,8 +2,6 @@ package com.example.spring.home.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
-import org.springframework.core.io.support.ResourcePropertiesPersister;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,10 +14,6 @@ public class HomeController {
 	public String home() {
 		
 		logger.debug("request ");
-		
-		
-		ResourcePropertiesPersister resourcePropertiesPersister;
-		ResourceProperties resourceProperties;
 		
 		return "home";
 	}

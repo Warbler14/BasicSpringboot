@@ -13,18 +13,25 @@ public class JavaScriptController {
 	
 	private final static String SUB_PATH = "javascript/";
 	
-	@RequestMapping("/test01")
-	public String test01() {
-		logger.debug("in test01");
+	@RequestMapping("/defaultTime")
+	public String defaultTime() {
+		logger.debug("in defaultTime");
 		
-		return SUB_PATH + "test01";
+		return SUB_PATH + "defaultTime";
 	}
 	
-	@RequestMapping("/test02")
-	public String test02() {
-		logger.debug("in test02");
+	@RequestMapping("/jquery01")
+	public String jquery01() {
+		logger.debug("in jquery01");
 		
-		return SUB_PATH + "test02";
+		return SUB_PATH + "jquery01";
+	}
+	
+	@RequestMapping("/mementjs")
+	public String mementjs() {
+		logger.debug("in mementjs");
+		
+		return SUB_PATH + "mementjs";
 	}
 
 }

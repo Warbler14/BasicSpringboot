@@ -13,7 +13,7 @@ public interface SqliteService {
 	
 	public String getAllByPreparedStatement() throws Exception;
 
-	public List<TestModel> getAll() throws Exception;
+	public List<TestModel> getAllBySession() throws Exception;
 	
 	public List<TestModel> getAllByMapperInterface() throws Exception;
 	

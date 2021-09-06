@@ -67,26 +67,25 @@ public class SqliteServiceImpl implements SqliteService {
 	}
 
 	@Override
-	public List<TestModel> getAll() throws Exception {
+	public List<TestModel> getAllBySession() throws Exception {
 		
 		SqlSessionAdaptor sqlSessionAdaptor = new SqlSessionFactoryAdaptor();
 		SqlSession session = sqlSessionAdaptor.getSqlSession("mybatis/configuration.xml");
 		
 		List<TestModel> resultList = session.selectList("com.example.spring.dbTest.mapper.TestMapper.selectAll");
 		
-		
 		return resultList;
 	}
 
 	@Override
 	public List<TestModel> getAllByMapperInterface() throws Exception {
-		
+		/*
+		 * MapperRegistry 에 com.example.spring.dbTest.mapper.TestMapper 가 설정되어있
+		 * */
 		SqlSessionAdaptor sqlSessionAdaptor = new SqlSessionFactoryAdaptor();
 		SqlSession session = sqlSessionAdaptor.getSqlSession("mybatis/configuration.xml");
 		
-		
 		TestMapper testMapper = session.getMapper(TestMapper.class);
-		
 		
 		List<TestModel> resultList = testMapper.selectAll();
 		return resultList;

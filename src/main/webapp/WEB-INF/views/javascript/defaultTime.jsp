@@ -3,11 +3,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>test02</title>
+<title>default Time</title>
 </head>
 <body>
 
-	<h1>test02</h1>
+	<h1>default Time</h1>
 	
 	<br/>
 	<span id="currentTime">test</span>
@@ -62,11 +62,6 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 	setTime();
 	test01();
-
-	
-	
-
-	
 
 	
 });

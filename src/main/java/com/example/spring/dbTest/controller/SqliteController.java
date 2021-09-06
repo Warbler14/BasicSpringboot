@@ -39,16 +39,17 @@ public class SqliteController {
 			String resultByPreparedStatement = sqliteService.getAllByPreparedStatement();
 			outerMap.put("preparedStatement", resultByPreparedStatement);
 
-//			List<TestModel> resultList = sqliteService.getAll();
-//			outerMap.put("list", resultList);	
-//			List<TestModel> resultList2 = sqliteService.getAllByMapperInterface();
-//			outerMap.put("list2", resultList2);
+			List<TestModel> resultList1 = sqliteService.getAllBySession();
+			outerMap.put("list by session", resultList1);
+			
+			List<TestModel> resultList2 = sqliteService.getAllByMapperInterface();
+			outerMap.put("list by interface", resultList2);
 			
 			List<TestModel> resultList3 = sqliteService.getAllBySqlSessionBean();
-			outerMap.put("list3", resultList3);
+			outerMap.put("list by autowired sessionBean", resultList3);
 			
 			List<TestModel> resultList4 = sqliteService.getAllByMapperBean();
-			outerMap.put("list4", resultList4);
+			outerMap.put("list by mapper", resultList4);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

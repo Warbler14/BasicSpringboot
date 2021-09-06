@@ -3,11 +3,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>test01</title>
+<title>jquery01</title>
 </head>
 <body>
 
-	<h1>test01</h1>
+	<h1>jquery01</h1>
 	
 	<br/>
 	<span id="currentMs">test</span>
