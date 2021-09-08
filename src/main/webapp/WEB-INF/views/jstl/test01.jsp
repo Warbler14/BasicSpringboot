@@ -11,8 +11,7 @@
 	<h1>jstl test01</h1>
 	
 	<br/>
-	
-	<span id="currentTime">test</span>
+	<a href="./test02">test page 2</a>
 	
 	<table border="1">
 	    <tr>
@@ -30,8 +29,13 @@
 	    </c:forEach>
 	</table>
 	
+	<c:set var="code" value="data"/>
+	<c:if test="${code eq 'data'}" var="code" scope="session">
+		<p>~<c:out value="${code}"/>
+	</c:if>
+	<c:out value="${session.session}" /> 
 	
-	
+	<p>https://starkying.tistory.com/entry/Servlet-JSP의-4가지-Scope</p>
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(){

@@ -2,6 +2,9 @@ package com.example.spring.jstl.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +34,21 @@ public class JSTLController {
 		
 		List<User> users = jstlService.getAllUsersForJstl();
 		
-		 mav.addObject("users", users);
+		mav.addObject("users", users);
+		
+		return mav;
+	}
+	
+	@GetMapping("/test02")
+	public ModelAndView test02(HttpServletRequest req) {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "test02");
+		
+		HttpSession session = req.getSession();
+		
+		Boolean result = (boolean)session.getAttribute("code");
+		logger.debug("session result : " + result);
+		
+		mav.addObject("sessionResult", result);
 		
 		return mav;
 	}
