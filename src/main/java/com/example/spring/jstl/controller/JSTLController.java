@@ -53,5 +53,14 @@ public class JSTLController {
 		return mav;
 	}
 	
+	@GetMapping("/importPage")
+	public ModelAndView importPage(HttpServletRequest req) {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "importPage");
+		
+		String id = req.getParameter("id");
+		logger.debug("id : " + id);
+		
+		return mav;
+	}
 
 }
