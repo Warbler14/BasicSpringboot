@@ -1,6 +1,8 @@
 package com.example.spring.jstl.controller;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,7 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 import com.example.spring.jstl.model.User;
 import com.example.spring.jstl.service.JSTLService;
@@ -28,9 +33,62 @@ public class JSTLController {
 	@Autowired
 	JSTLService jstlService;
 	
-	@GetMapping("/test01")
-	public ModelAndView test01() {
-		ModelAndView mav = new ModelAndView(SUB_PATH + "test01");
+	@Autowired
+	private RequestMappingHandlerMapping requestMappingHandlerMapping;
+	
+	@GetMapping("")
+	public ModelAndView list() {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "list");
+		
+		Map<RequestMappingInfo, HandlerMethod> map = requestMappingHandlerMapping.getHandlerMethods();
+		for (Entry<RequestMappingInfo, HandlerMethod> elem : map.entrySet()) {
+			logger.debug(
+					elem.getKey().getPatternsCondition().getPatterns().toArray()[0]
+					+ ", " + elem.getValue().getMethod().getDeclaringClass().getSimpleName()
+					+ ", " + elem.getValue().getMethod().getName() 
+					+ ", " + elem.getValue().getMethod().getReturnType().getSimpleName()
+					);
+		}
+		
+		//https://since.tistory.com/23
+		return mav;
+	}
+	
+	@GetMapping("/formattingTags")
+	public ModelAndView formattingTags() {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "formattingTags");
+		
+		
+		return mav;
+	}
+
+	@GetMapping("/functions")
+	public ModelAndView functions() {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "functions");
+		
+		
+		return mav;
+	}
+
+	@GetMapping("/sqlTags")
+	public ModelAndView sqlTags() {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "sqlTags");
+		
+		
+		return mav;
+	}
+
+	@GetMapping("/xmlTags")
+	public ModelAndView xmlTags() {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "xmlTags");
+		
+		
+		return mav;
+	}
+
+	@GetMapping("/coreTags")
+	public ModelAndView coreTags() {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "coreTags");
 		
 		List<User> users = jstlService.getAllUsersForJstl();
 		
@@ -39,9 +97,9 @@ public class JSTLController {
 		return mav;
 	}
 	
-	@GetMapping("/test02")
-	public ModelAndView test02(HttpServletRequest req) {
-		ModelAndView mav = new ModelAndView(SUB_PATH + "test02");
+	@GetMapping("/coreTags-1")
+	public ModelAndView coreTags(HttpServletRequest req) {
+		ModelAndView mav = new ModelAndView(SUB_PATH + "coreTags-1");
 		
 		HttpSession session = req.getSession();
 		

@@ -10,15 +10,10 @@
 </head>
 <body>
 
-	<h1>jstl test01</h1>
+	<h1>Core Tags</h1>
 	
 	<c:out value="${session.session}" />
 	
-	
-	<div style="width: 1000px;">
-		<hr/>
-		<p>Core Tags</p>
-	</div>
 	
 	<div style="width: 1000px;">
 		<hr/>
@@ -29,7 +24,7 @@
 		<c:if test="${code eq 'data'}" var="code" scope="session">
 			<p>~<c:out value="${code}"/><p>
 		</c:if>
-		<p><a href="./test02">test page 2</a></p>
+		<p><a href="./coreTags-1">test coreTags-1</a></p>
 		
 	</div>
 
