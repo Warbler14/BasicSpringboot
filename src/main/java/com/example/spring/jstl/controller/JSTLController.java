@@ -3,6 +3,7 @@ package com.example.spring.jstl.controller;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -71,9 +72,17 @@ public class JSTLController {
 	}
 
 	@GetMapping("/sqlTags")
-	public ModelAndView sqlTags() {
+	public ModelAndView sqlTags(HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView(SUB_PATH + "sqlTags");
 		
+//		String header=request.getHeader("X-Forwarded-For");
+//		String ipAddress=new StringTokenizer(header, ",").nextToken().trim();
+		
+		
+		
+		String ipAddress = jstlService.getClientIP(request);
+		
+		mav.addObject("ipAddress", ipAddress);
 		
 		return mav;
 	}
