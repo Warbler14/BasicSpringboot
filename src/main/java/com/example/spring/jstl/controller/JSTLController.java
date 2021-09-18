@@ -1,17 +1,22 @@
 package com.example.spring.jstl.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.method.HandlerMethod;
@@ -19,6 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+import com.example.spring.jstl.model.Book;
 import com.example.spring.jstl.model.User;
 import com.example.spring.jstl.service.JSTLService;
 
@@ -78,8 +84,6 @@ public class JSTLController {
 //		String header=request.getHeader("X-Forwarded-For");
 //		String ipAddress=new StringTokenizer(header, ",").nextToken().trim();
 		
-		
-		
 		String ipAddress = jstlService.getClientIP(request);
 		
 		mav.addObject("ipAddress", ipAddress);
@@ -94,6 +98,34 @@ public class JSTLController {
 		
 		return mav;
 	}
+	
+	@GetMapping(path="/books", produces = MediaType.APPLICATION_XML_VALUE)
+	public List<Book> books(@RequestHeader Map<String, Object> requestHeader, HttpServletResponse response) {
+
+		//TODO test
+		// Headers Accept : application/json
+		// Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
+		
+		
+		List<Book> bookList = new ArrayList<Book>();
+		
+		Book book1 = new Book();
+		book1.setName("Harvest");
+		book1.setAuthor("Jim Crace");
+		book1.setPrice(10000);
+		
+		Book book2 = new Book();
+		book2.setName("Moneyball");
+		book2.setAuthor("Michael Lewis");
+		book2.setPrice(10001);
+		
+		bookList.add(book1);
+		bookList.add(book2);
+		
+		return bookList;
+	}
+	
+	
 
 	@GetMapping("/coreTags")
 	public ModelAndView coreTags() {

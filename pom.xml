@@ -62,6 +62,11 @@
 		    <version>2.3.4.RELEASE</version>
 		</dependency>
 		 -->
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
 
 		<!-- myBatis 설정 -->
 		<dependency>
