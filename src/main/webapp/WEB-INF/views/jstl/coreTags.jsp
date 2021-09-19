@@ -187,14 +187,7 @@
 	--%>
 	</div>
 	
-	<div style="width: 1000px;">
-		<hr/>
-		<p>참고</p>
-		<hr/>
-		<p>https://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm</p>
-		<p>https://starkying.tistory.com/entry/Servlet-JSP의-4가지-Scope</p>
-		<hr/>
-	</div>
+	
 
 <script type="text/javascript">
 var entityMap = {
