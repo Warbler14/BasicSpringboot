@@ -1,5 +1,7 @@
 package com.example.spring.home.controller;
 
+import javax.servlet.Servlet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -18,4 +20,10 @@ public class HomeController {
 		return "home";
 	}
 
+	@SuppressWarnings("unused")
+	public void test() {
+		
+		Servlet servlet;
+		
+	}
 }

@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Lazy;
 @Configuration
 @Lazy
 @MapperScan(basePackages = {"com.example.spring.dbTest.mapper"})
-public class MybatisConfig {
+public class SqlSessionConfig {
 
 	
 	@Bean
