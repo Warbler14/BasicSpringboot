@@ -21,17 +21,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.spring.jstl.service.JSTLService;
 
 @Service
-public class FileService {
+public class StorageService {
 
 	@SuppressWarnings("unused")
-	private final static Logger logger = LoggerFactory.getLogger(JSTLService.class);
+	private final static Logger logger = LoggerFactory.getLogger(StorageService.class);
 	
-	public String fileSeparator = FileSystems.getDefault().getSeparator();
+	public final String fileSeparator = FileSystems.getDefault().getSeparator();
 
-	String savePath = System.getProperty("user.dir") + fileSeparator + "files";
+	private final String savePath = System.getProperty("user.dir") + fileSeparator + "storage";
 	
 	@PostConstruct
 	public void init() {

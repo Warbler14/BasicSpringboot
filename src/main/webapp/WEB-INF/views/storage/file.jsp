@@ -11,7 +11,7 @@
 <body>
 
 	<h1>File</h1>
-	<form action="/file/put" method="post" enctype="multipart/form-data">
+	<form action="/storage/put" method="post" enctype="multipart/form-data">
 		<input name="file" type="file"/>
         <input type="submit" role="button" value="upload">
 	</form>
@@ -24,8 +24,8 @@
 		    </tr>
 		    <c:forEach var="fileName" items="${fileList}">
 		    <tr>
-		        <td><a href="/file/down/${fileName}">${fileName}</a></td>
-		        <td><a href="/file/delete/${fileName}">${fileName}</a></td>
+		        <td><a href="/storage/down/${fileName}">${fileName}</a></td>
+		        <td><a href="/storage/delete/${fileName}">${fileName}</a></td>
 		    </tr>  
 		    </c:forEach>
 		</table>

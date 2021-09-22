@@ -14,7 +14,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,18 +21,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.spring.file.service.FileService;
+import com.example.spring.file.service.StorageService;
 
 @Controller
-@RequestMapping("/file")
-public class FileController {
+@RequestMapping("/storage")
+public class StorageController {
 	
-	private final static Logger logger = LoggerFactory.getLogger(FileController.class);
+	private final static Logger logger = LoggerFactory.getLogger(StorageController.class);
 	
-	private final static String SUB_PATH = "file/";
+	private final static String SUB_PATH = "storage/";
 	
 	@Autowired
-	FileService fileService;
+	StorageService fileService;
 	
 	@GetMapping("/file")
 	public ModelAndView filePage() {
@@ -48,20 +47,16 @@ public class FileController {
 	
 	@RequestMapping("/put")
 	public void put(@RequestParam("file") MultipartFile file, HttpServletRequest reqest, HttpServletResponse response) throws IOException {
-		logger.debug("in upload");
-		
 		fileService.saveResource(file);
 		
-		response.sendRedirect("/file/file");
+		response.sendRedirect("/storage/file");
 	}
 	
 	@GetMapping("/delete/{fileName}")
 	public void fileDelete(@PathVariable("fileName") String fileName, HttpServletResponse response) throws IOException {
-		logger.debug("in upload");
-		
 		fileService.deleteResource(fileName);
 		
-		response.sendRedirect("/file/file");
+		response.sendRedirect("/storage/file");
 	}
 
 	@GetMapping("/down/{fileName}")
@@ -73,6 +68,5 @@ public class FileController {
 	            .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + fileName + "\"")
 	            .body(resource);
 	}
-
 	
 }
