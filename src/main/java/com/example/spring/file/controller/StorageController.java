@@ -1,7 +1,10 @@
 package com.example.spring.file.controller;
 
 import java.io.IOException;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,10 +21,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.spring.file.service.StorageService;
+import com.example.spring.response.Result;
 
 @Controller
 @RequestMapping("/storage")
@@ -69,4 +74,12 @@ public class StorageController {
 	            .body(resource);
 	}
 	
+	@GetMapping("/data")
+	public @ResponseBody Result<Map<String, String>> data(HttpServletRequest reqest) throws IOException {
+		
+		Map<String, String> test = new HashMap<>();
+		test.put("message", new Date().toString());
+		
+		return new Result<Map<String, String>>(test);
+	}
 }

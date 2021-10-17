@@ -117,6 +117,12 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
+		<!-- ci lib -->
+		<dependency>
+			<groupId>com.lotus.jewel.ci</groupId>
+			<artifactId>commandInterface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- 
 		<dependency>
 			<groupId>com.mo.core</groupId>
