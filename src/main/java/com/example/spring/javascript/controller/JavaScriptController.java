@@ -27,11 +27,11 @@ public class JavaScriptController {
 		return SUB_PATH + "jquery01";
 	}
 	
-	@RequestMapping("/mementjs")
-	public String mementjs() {
-		logger.debug("in mementjs");
+	@RequestMapping("/momentjs")
+	public String momentjs() {
+		logger.debug("in momentjs");
 		
-		return SUB_PATH + "mementjs";
+		return SUB_PATH + "momentjs";
 	}
 
 }

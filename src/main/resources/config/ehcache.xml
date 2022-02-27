@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+	updateCheck="false">
+
+	<!-- 임시저장 경로를 설정 -->
+	<diskStore path="java.io.tmpdir" />
+
+	<sizeOfPolicy maxDepth="100000" maxDepthExceededBehavior="continue" />
+
+	<defaultCache
+		eternal="false"
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="60"
+		overflowToDisk="false"
+		diskPersistent="false"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+	</defaultCache>
+
+	<cache 
+		name="product"
+		maxEntriesLocalHeap="2000"
+		eternal="false"
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="5"
+		memoryStoreEvictionPolicy="LFU">
+	</cache>
+	
+	<cache 
+		name="fruit"
+		maxEntriesLocalHeap="2000"
+		eternal="false"
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="10"
+		memoryStoreEvictionPolicy="LFU">
+	</cache>
+
+</ehcache>

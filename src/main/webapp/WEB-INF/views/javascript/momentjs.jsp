@@ -3,13 +3,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>mementjs</title>
+<title>momentjs</title>
 </head>
 <script type="text/javascript">
 </script>
 <body>
 
-	<h1>mementjs</h1>
+	<h1>momentjs</h1>
 	
 	<p><span id="moment.locale"></span></p>
 	
@@ -21,7 +21,7 @@
 	
 	<p>https://developer.mozilla.org/en-US/docs/Web/API/setInterval</p>
 	
-<script type="text/javascript" src="/js/mement/moment.js"></script>
+<script type="text/javascript" src="/js/moment/moment.js"></script>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(){
 	let setTime = function() {
