@@ -12,7 +12,7 @@
 
 	<h1>XML Tags</h1>
 	
-	<c:set var = "book">
+	<c:set var = "localBook">
 		<books>
 			<book>
 				<name>Padam History</name>
@@ -41,7 +41,7 @@
 		<p><span id="cOutSet">&lt;x:parse&gt;, &lt;x:out&gt;</span></p>
 		<hr/>
 		
-		<x:parse xml = "${book}" var="output"/>
+		<x:parse xml = "${localBook}" var="output"/>
 
 		<b>The title of the first book is</b>:
 		<x:out select = "$output/books/book[1]/name"/>
@@ -52,41 +52,40 @@
 		
 		<hr/> <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 		
-		<c:import var = "bookInfo" url = "http://localhost:8081/jstl/books"/>
-		
-		<div>
-			<c:out value="${bookInfo}"/>		
-		</div>
-		
-		<x:parse xml = "${bookInfo}" var = "output"/>
-		<b>The title of the first book is</b>: 
-	    <x:out select = "$output/List/item[1]/name" />
-	    <br>
-	      
-	    <b>The price of the second book</b>: 
-	    <x:out select = "$output/List/item[2]/price" />
-		
-	</div>
-	
-	<div style="width: 1000px;">
-		<hr/>
 		<p><span id="cOutSet">&lt;x:set&gt;, &lt;x:if&gt;</span></p>
 		<hr/>
 		
-		<x:parse xml="${book}" var="output" />
-		<x:set var="fragment" select = "$output/books/book[2]/price"/>
+		<x:parse xml="${localBook}" var="output"/>
+		<x:set select = "$output/books/book[2]/price" var="fragment"/>
 		
 		<b>The price of Great Mistry</b>: 
      	<x:out select = "$fragment" />
      	
-     	<x:if select = "$output//book">
+     	<x:if select = "$output/book">
      		<span>Document has a least on &lt;book&gt; element.</span>
      	</x:if>
      	
      	<x:if select = "$output/books/book[2]/price > 1000">
      		<span>Book prices are ofver 1,000</span>
      	</x:if>
-      
+		
+	</div>
+	
+	<div style="width: 1000px;">
+		<c:import url = "/jstl/bookList" var = "bookList"/>
+		
+		<div>
+			<p>bookList</p>
+			<c:out value="${bookList}"/>		
+		</div>
+		
+		<x:parse xml = "${bookList}" var = "bookList2"/>
+		<b>The title of the first book is</b>: 
+	    <x:out select = "$bookList2/List/item[1]/name" />
+	    <br>
+	      
+	    <b>The price of the second book</b>: 
+	    <x:out select = "$bookList2/List/item[2]/price" />
 	</div>
 	
 	<div style="width: 1000px;">
@@ -95,8 +94,8 @@
 		<hr/>
 		
 		<ul class =  "list">
-			<x:forEach select = "$output/books/book/name" var = "item">
-				<li>Book Name : <x:out select = "$item" /></li>
+			<x:forEach select = "$output//books/book/name" var = "bookName">
+				<li>Book Name : <x:out select = "$bookName" /></li>
 			</x:forEach>
 		</ul>
       

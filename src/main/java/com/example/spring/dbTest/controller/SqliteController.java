@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.spring.dbTest.service.SqliteService;
 
-import test.model.TestModel;
+import example.model.TestModel;
 
 @Controller
 @RequestMapping(value = "/sqlite")
@@ -36,18 +36,23 @@ public class SqliteController {
 		outerMap.put("message", sqliteService.getTestMessage());
 		
 		try {
+			logger.debug("test for preparedStatement");
 			String resultByPreparedStatement = sqliteService.getAllByPreparedStatement();
 			outerMap.put("preparedStatement", resultByPreparedStatement);
 
+			logger.debug("test for SqlSession");
 			List<TestModel> resultList1 = sqliteService.getAllBySession();
 			outerMap.put("list by session", resultList1);
 			
+			logger.debug("test for Mapper interface");
 			List<TestModel> resultList2 = sqliteService.getAllByMapperInterface();
 			outerMap.put("list by interface", resultList2);
 			
+			logger.debug("test for sqlite session bean");
 			List<TestModel> resultList3 = sqliteService.getAllBySqlSessionBean();
 			outerMap.put("list by autowired sessionBean", resultList3);
 			
+			logger.debug("test for mybatis interface");
 			List<TestModel> resultList4 = sqliteService.getAllByMapperBean();
 			outerMap.put("list by mapper", resultList4);
 			

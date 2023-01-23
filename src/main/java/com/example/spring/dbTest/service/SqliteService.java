@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import test.model.TestModel;
+import example.model.TestModel;
 
 @Service
 public interface SqliteService {

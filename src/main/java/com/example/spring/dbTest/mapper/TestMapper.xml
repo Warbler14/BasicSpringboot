@@ -3,7 +3,7 @@
 
 <mapper namespace="com.example.spring.dbTest.mapper.TestMapper">
 
-  <select id="selectAll" resultType="test.model.TestModel">
+  <select id="selectAll" resultType="com.example.spring.dbTest.model.TestModel">
     select id
 	    ,name
 	    , address

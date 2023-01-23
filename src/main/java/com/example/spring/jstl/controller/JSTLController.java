@@ -30,7 +30,6 @@ import com.example.spring.jstl.service.JSTLService;
 @RequestMapping("/jstl")
 public class JSTLController {
 	
-	@SuppressWarnings("unused")
 	private final static Logger logger = LoggerFactory.getLogger(JSTLController.class);
 	
 	private final static String SUB_PATH = "jstl/";
@@ -97,8 +96,8 @@ public class JSTLController {
 		return mav;
 	}
 	
-	@GetMapping(path="/books", produces = MediaType.APPLICATION_XML_VALUE)
-	public List<Book> books(@RequestHeader Map<String, Object> requestHeader, HttpServletResponse response) {
+	@GetMapping(path="/bookList", produces = MediaType.APPLICATION_XML_VALUE)
+	public List<Book> bookList(@RequestHeader Map<String, Object> requestHeader, HttpServletResponse response) {
 
 		//TODO test
 		// Headers Accept : application/json

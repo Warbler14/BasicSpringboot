@@ -16,8 +16,7 @@ import com.example.spring.dbTest.service.SqliteService;
 import com.lotus.jewel.data.sqlSession.SqlSessionAdaptor;
 import com.lotus.jewel.data.sqlSession.SqlSessionFactoryAdaptor;
 
-import test.SQLitePreparedStatementAdaptorTest;
-import test.model.TestModel;
+import example.model.TestModel;
 
 
 @Service
@@ -55,13 +54,13 @@ public class SqliteServiceImpl implements SqliteService {
 		
 		String url = JDBC.PREFIX + dbFilePath;
 		
-		try {
-			String result = SQLitePreparedStatementAdaptorTest.getTable(url, "select * from test");
-			return result;
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			String result = SQLitePreparedStatementAdaptorGroup.getTable(url, "select * from test");
+//			return result;
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		
 		return null;
 	}

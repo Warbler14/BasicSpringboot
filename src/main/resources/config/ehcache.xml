@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
-	updateCheck="false">
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd" updateCheck="false">
 
-	<!-- 임시저장 경로를 설정 -->
 	<diskStore path="java.io.tmpdir" />
 
 	<sizeOfPolicy maxDepth="100000" maxDepthExceededBehavior="continue" />
