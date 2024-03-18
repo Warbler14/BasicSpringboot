@@ -66,6 +66,17 @@
 			</exclusions>
 		</dependency>
 		
+		<!-- spring security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
 		<!-- 
 		<dependency>
@@ -136,13 +147,6 @@
 			<artifactId>dataCore</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
-		<!-- ci lib -->
-		<dependency>
-			<groupId>com.lotus.jewel.ci</groupId>
-			<artifactId>commandInterface</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<!-- 
 		<dependency>
 			<groupId>com.mo.core</groupId>
@@ -152,6 +156,13 @@
 			<systemPath>${project.basedir}/lib/dataCore-0.0.1-SNAPSHOT.jar</systemPath>
 		</dependency>
 		-->
+		
+		<!-- ci lib -->
+		<dependency>
+			<groupId>com.lotus.jewel.ci</groupId>
+			<artifactId>commandInterface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		
 		<!-- lombok -->
 		<dependency>
@@ -179,8 +190,7 @@
 			    </configuration>
 			</plugin>
 		</plugins>
-		
-		
+
 		<sourceDirectory>src/main/java</sourceDirectory>
 		
 		<resources>
